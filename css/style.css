@@ -620,6 +620,7 @@ label.error {
 /* 1.7 Content styles */
 
 .layout {
+  height: 100vh;
   position: relative;
   overflow: hidden;
 }
@@ -787,7 +788,7 @@ label.error {
 .header-logo {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
-  font-size: 0.81em;
+  font-size: 1em;
   letter-spacing: 0.32em;
   position: absolute;
   z-index: 3;
@@ -846,7 +847,7 @@ label.error {
 .vertical-panel-title {
   font-family: "montserratsemibold";
   font-weight: normal;
-  font-size: 10px;
+  font-size: 12px;
   white-space: nowrap;
   text-transform: uppercase;
   letter-spacing: 1em;
@@ -863,6 +864,7 @@ label.error {
 
 @media (max-height: 850px) {
   .vertical-panel-title {
+    display: flex;
   }
 }
 
