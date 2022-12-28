@@ -1,14 +1,652 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <script src="js/script.js"></script>
-    <title>Document</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <title>Real Arch Studio</title>
+
+    <!--  -->
+    <link rel='dns-prefetch' href='//maps.google.com' />
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <script type="text/javascript">
+        window._wpemojiSettings = { "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/", "ext": ".png", "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/", "svgExt": ".svg", "source": { "concatemoji": "http:\/\/www.raydimension.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.2.5" } };
+        !function (a, b, c) { function d(a, b) { var c = String.fromCharCode; l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, a), 0, 0); var d = k.toDataURL(); l.clearRect(0, 0, k.width, k.height), l.fillText(c.apply(this, b), 0, 0); var e = k.toDataURL(); return d === e } function e(a) { var b; if (!l || !l.fillText) return !1; switch (l.textBaseline = "top", l.font = "600 32px Arial", a) { case "flag": return !(b = d([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819])) && (b = d([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]), !b); case "emoji": return b = d([55357, 56424, 55356, 57342, 8205, 55358, 56605, 8205, 55357, 56424, 55356, 57340], [55357, 56424, 55356, 57342, 8203, 55358, 56605, 8203, 55357, 56424, 55356, 57340]), !b }return !1 } function f(a) { var c = b.createElement("script"); c.src = a, c.defer = c.type = "text/javascript", b.getElementsByTagName("head")[0].appendChild(c) } var g, h, i, j, k = b.createElement("canvas"), l = k.getContext && k.getContext("2d"); for (j = Array("flag", "emoji"), c.supports = { everything: !0, everythingExceptFlag: !0 }, i = 0; i < j.length; i++)c.supports[j[i]] = e(j[i]), c.supports.everything = c.supports.everything && c.supports[j[i]], "flag" !== j[i] && (c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && c.supports[j[i]]); c.supports.everythingExceptFlag = c.supports.everythingExceptFlag && !c.supports.flag, c.DOMReady = !1, c.readyCallback = function () { c.DOMReady = !0 }, c.supports.everything || (h = function () { c.readyCallback() }, b.addEventListener ? (b.addEventListener("DOMContentLoaded", h, !1), a.addEventListener("load", h, !1)) : (a.attachEvent("onload", h), b.attachEvent("onreadystatechange", function () { "complete" === b.readyState && c.readyCallback() })), g = c.source || {}, g.concatemoji ? f(g.concatemoji) : g.wpemoji && g.twemoji && (f(g.twemoji), f(g.wpemoji))) }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 .07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='wp-block-library-css' href='wp-includes/css/dist/block-library/style.min.css'
+        type='text/css' media='all' />
+    <link rel='stylesheet' id='ccw_main_css-css'
+        href='wp-content/plugins/click-to-chat-for-whatsapp/assets/css/mainstyles.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='rs-plugin-settings-css'
+        href='wp-content/plugins/revslider/public/assets/css/settings.css' type='text/css' media='all' />
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {}
+    </style>
+    <!--[if lt IE 9]>
+    <link rel='stylesheet' id='vc_lte_ie9-css'  href='http://www.raydimension.com/wp-content/plugins/js_composer/assets/css/vc_lte_ie9.min.css?ver=6.0.3' type='text/css' media='screen' />
+    <![endif]-->
+    <link rel='stylesheet' id='js_composer_front-css'
+        href='wp-content/plugins/js_composer/assets/css/js_composer.min.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='goarch_style_wp-css' href='wp-content/themes/goarch/style.css' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='goarch_main_style-css' href='wp-content/themes/goarch/css/style.css' type='text/css'
+        media='all' />
+    <link rel='stylesheet' id='goarch_fonts_google_Oswald-css'
+        href='//fonts.googleapis.com/css?family=Oswald%3A300%2C400%2C700&#038;ver=5.2.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='goarch_fonts_google_Montserrat-css'
+        href='//fonts.googleapis.com/css?family=Montserrat%3A400%2C700&#038;ver=5.2.5' type='text/css' media='all' />
+    <script type='text/javascript' src='wp-includes/js/jquery/jquery.js'></script>
+    <script type='text/javascript' src='wp-includes/js/jquery/jquery-migrate.min.js'></script>
+    <script type='text/javascript'
+        src='wp-content/plugins/revslider/public/assets/js/jquery.themepunch.tools.min.js'></script>
+    <script type='text/javascript'
+        src='wp-content/plugins/revslider/public/assets/js/jquery.themepunch.revolution.min.js'></script>
+    <link rel='https://api.w.org/' href='http://www.raydimension.com/wp-json/' />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.raydimension.com/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml"
+        href="http://www.raydimension.com/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 5.2.5" />
+    <link rel='shortlink' href='http://www.raydimension.com/' />
+    <style>
+        .home p {
+            color: #a8a8a8;
+        }
+
+        .simplefilter.simplefilter_2063 li {
+            background-color: transparent !important;
+            padding: 5px 10px !important;
+            position: relative;
+            text-transform: capitalize;
+            font-size: 14px;
+            color: #ccc !important;
+        }
+
+        .simplefilter.simplefilter_2063 li.active {
+            color: #ffffff !important;
+        }
+
+        .simplefilter.simplefilter_2063 li:after {
+            content: "/";
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: -5px;
+        }
+
+        .simplefilter.simplefilter_2063 li:last-child:after {
+            display: none;
+        }
+
+        .item-desc {
+            top: 0;
+            /* background: transparent; */
+            left: 0 !important;
+            right: 0 !important;
+            padding: 20px !important;
+            font-weight: bold !important;
+            font-size: 30px !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px !important;
+            bottom: 0 !important;
+        }
+
+        #filter_gallery_2063 .thumbnail_2063 {
+            border: none;
+            background: transparent;
+            padding: 0;
+            border-radius: 0;
+        }
+
+        #filter_gallery_2063 .filtr-item {
+            padding: 0 !important;
+            margin: 0;
+        }
+
+        .page-id-1906 input[type="text"],
+        .page-id-1906 input[type="password"],
+        .page-id-1906 input[type="search"],
+        .page-id-1906 input[type="email"],
+        .page-id-1906 input[type="phone"],
+        .page-id-1906 input[type="tel"],
+        .page-id-1906 select {
+            width: 100%;
+            /* padding: 0; */
+            padding-right: 0;
+            padding-bottom: 0px;
+            padding-top: 0;
+            height: 57px;
+            box-sizing: content-box;
+            padding-left: 20px;
+        }
+
+        .text-primary {
+            color: #c5a47e !important;
+        }
+
+        .ekko-lightbox .modal-title {
+            color: #000000 !important;
+        }
+
+        .col-about-img img {
+            cursor: pointer;
+        }
+    </style>
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            jQuery('img[src="wp-content/uploads/2019/06/video.jpg"]').click(function () {
+            });
+        })			</script>
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
+    <style type="text/css" id="custom-background-css">
+        body.custom-background {
+            background-color: #262626;
+        }
+    </style>
+    <meta name="generator"
+        content="Powered by Slider Revolution 5.4.8.3 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <link rel="icon" href="wp-content/uploads/2019/07/favicon.png" sizes="32x32" />
+    <link rel="icon" href="wp-content/uploads/2019/07/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="wp-content/uploads/2019/07/favicon.png" />
+    <meta name="msapplication-TileImage" content="http://www.raydimension.com/wp-content/uploads/2019/07/favicon.png" />
+    <script type="text/javascript">function setREVStartSize(e) {
+            try {
+                e.c = jQuery(e.c); var i = jQuery(window).width(), t = 9999, r = 0, n = 0, l = 0, f = 0, s = 0, h = 0;
+                if (e.responsiveLevels && (jQuery.each(e.responsiveLevels, function (e, f) { f > i && (t = r = f, l = e), i > f && f > r && (r = f, n = e) }), t > r && (l = n)), f = e.gridheight[l] || e.gridheight[0] || e.gridheight, s = e.gridwidth[l] || e.gridwidth[0] || e.gridwidth, h = i / s, h = h > 1 ? 1 : h, f = Math.round(h * f), "fullscreen" == e.sliderLayout) { var u = (e.c.width(), jQuery(window).height()); if (void 0 != e.fullScreenOffsetContainer) { var c = e.fullScreenOffsetContainer.split(","); if (c) jQuery.each(c, function (e, i) { u = jQuery(i).length > 0 ? u - jQuery(i).outerHeight(!0) : u }), e.fullScreenOffset.split("%").length > 1 && void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 ? u -= jQuery(window).height() * parseInt(e.fullScreenOffset, 0) / 100 : void 0 != e.fullScreenOffset && e.fullScreenOffset.length > 0 && (u -= parseInt(e.fullScreenOffset, 0)) } f = u } else void 0 != e.minHeight && f < e.minHeight && (f = e.minHeight); e.c.closest(".rev_slider_wrapper").css({ height: f })
+            } catch (d) { console.log("Failure at Presize of Slider:" + d) }
+        };</script>
+    <style type="text/css" id="wp-custom-css">
+        .vc_gitem_row .vc_gitem-col {
+            padding: 30px;
+            background-color: #333;
+        }
+
+        .vc_btn3.vc_btn3-color-juicy-pink,
+        .vc_btn3.vc_btn3-color-juicy-pink.vc_btn3-style-flat {
+            color: #fff;
+            background-color: #c5a47e;
+        }
+    </style>
+    <noscript>
+        <style>
+            .wpb_animate_when_almost_visible {
+                opacity: 1;
+            }
+        </style>
+    </noscript>
+
+    <!--  -->
 </head>
+
 <body>
-    
+    <div class="loader">
+        <div class="page-lines">
+            <div class="container">
+                <div class="col-line col-xs-4">
+                    <div class="line"></div>
+                </div>
+                <div class="col-line col-xs-4">
+                    <div class="line"></div>
+                </div>
+                <div class="col-line col-xs-4">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="loader-brand">
+            <div class="sk-folding-cube">
+                <div class="sk-cube1 sk-cube"></div>
+                <div class="sk-cube2 sk-cube"></div>
+                <div class="sk-cube4 sk-cube"></div>
+                <div class="sk-cube3 sk-cube"></div>
+            </div>
+        </div>
+    </div>
+
+    <header id="top" class="header-home
+      ">
+        <div class="header-logo">Real Arch Studio</div>
+        <div class="vertical-panel"></div>
+        <div class="vertical-panel-content">
+            <div class="vertical-panel-info">
+                <div class="vertical-panel-title">Architectural Visualization</div>
+            </div>
+        </div>
+        <!-- Navigation Desctop -->
+        <nav class="navbar-desctop visible-md visible-lg">
+            <div class="container">
+                <a href="#top" class="brand js-target-scroll">
+
+                </a>
+                <div class="menu-main-container">
+                    <ul id="menu-main" class="navbar-desctop-menu ">
+                        <li id="menu-item-1904"
+                            class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1904 active ">
+                            <a href="index.html" aria-current="page">Home</a>
+                        </li>
+                        <li id="menu-item-1901"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1901"><a
+                                href="#">About us</a></li>
+                        <li id="menu-item-2137"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2137">
+                            <a href="#">Works</a>
+                        </li>
+                        <li id="menu-item-2049"
+                            class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2049"><a
+                                href="#">Services</a></li>
+                        <li id="menu-item-1929"
+                            class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1929"><a
+                                href="#">CONTACT US</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navigation Mobile -->
+        <nav class="navbar-mobile">
+            <a href="#top" class="brand js-target-scroll">
+                <span class="text-primary"></span> </a>
+            <!-- Navbar Collapse -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-mobile">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-mobile">
+                <ul id="menu-main-1" class="navbar-nav-mobile ">
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-1904 active ">
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1901"><a
+                            href="#">About us</a></li>
+                    <li
+                        class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-2137">
+                        <a href="#">Works</a>
+                    </li>
+                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2049"><a
+                            href="#">Services</a></li>
+                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1929"><a
+                            href="#">CONTACT US</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="layout">
+        <!-- Home -->
+        <main class="main ">
+            <!-- Start goarchlution slider -->
+            <div class="rev_slider_wrapper">
+                <div id="rev_slider" class="rev_slider fullscreenbanner">
+                    <!-- Main image-->
+                    <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullscreen-container"
+                        data-source="gallery" style="background:transparent;padding:0px;">
+                        <!-- START REVOLUTION SLIDER 5.4.8.3 fullscreen mode -->
+                        <div id="rev_slider_1_1" class="rev_slider fullscreenbanner" data-version="5.4.8.3">
+                            <ul> <!-- SLIDE  -->
+                                <li data-index="rs-10" data-transition="slotzoom-horizontal" data-slotamount="1"
+                                    data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
+                                    data-easeout="default" data-masterspeed="1000" data-delay="3000" data-rotate="0"
+                                    data-saveperformance="off" class="rev-slidebg" data-title="Slide" data-param1=""
+                                    data-param2="" data-param3="" data-param4="" data-param5="" data-param6=""
+                                    data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="wp-content/uploads/2016/09/56.jpg" alt="" title="56" width="5000"
+                                        height="2813" data-bgposition="center center" data-bgfit="cover"
+                                        data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 1 -->
+                                    <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-10-layer-3"
+                                        data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
+                                        data-y="['top','top','top','top']" data-voffset="['0','0','0','0']"
+                                        data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
+                                        data-basealign="slide" data-responsive_offset="on"
+                                        data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                        data-textAlign="['inherit','inherit','inherit','inherit']"
+                                        data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                        data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 5;background-color:rgba(10,10,10,0.8);"> </div>
+                                    <!-- LAYER NR. 2 -->
+                                    <div class="tp-caption   tp-resizeme" id="slide-10-layer-1"
+                                        data-x="['right','right','right','right']" data-hoffset="['23','-18','0','15']"
+                                        data-y="['middle','middle','middle','middle']"
+                                        data-voffset="['-35','-35','-25','-35']" data-fontsize="['50','45','30','30']"
+                                        data-lineheight="['80','75','65','55']" data-width="['1100','700','450','450']"
+                                        data-height="none" data-whitespace="['nowrap','normal','normal','normal']"
+                                        data-type="text" data-responsive_offset="on"
+                                        data-frames='[{"delay":500,"split":"chars","splitdelay":0.05,"speed":2000,"split_direction":"forward","frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];opacity:0;","ease":"Power2.easeInOut"}]'
+                                        data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                        data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 6; min-width: 1100px; max-width: 1100px; white-space: nowrap; font-size: 50px; line-height: 80px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: px;font-family:Oswald, sans-serif;text-transform:uppercase;letter-spacing:16px;text-align:right;">
+                                        WE ARE REAL ARCH STUDIO
+                                    </div>
+                                    <!-- LAYER NR. 3 -->
+                                    <div class="tp-caption   tp-resizeme" id="slide-10-layer-2"
+                                        data-x="['right','right','right','right']" data-hoffset="['41','0','18','32']"
+                                        data-y="['middle','middle','middle','middle']"
+                                        data-voffset="['61','105','105','105']" data-width="none" data-height="none"
+                                        data-whitespace="nowrap" data-type="text" data-responsive_offset="on"
+                                        data-frames='[{"delay":1500,"speed":1200,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power1.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"opacity:0;","ease":"Power1.easeInOut"}]'
+                                        data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                        data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 7; white-space: nowrap; font-size: 18px; line-height: 30px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: px;font-family:Montserratlight, sans-serif;text-align:right;">
+                                        We provide solutions to real estate developers, architects, <br>
+                                        interior designers & marketing agencies. <br>
+                                    </div>
+                                    <!-- SLIDE  -->
+                                <li data-index="rs-15" data-transition="slotzoom-horizontal" data-slotamount="1"
+                                    data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
+                                    data-easeout="default" data-masterspeed="1000" data-rotate="0"
+                                    data-saveperformance="off" data-title="Slide" data-param1="" data-param2=""
+                                    data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                                    data-param8="" data-param9="" data-param10="" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="wp-content/uploads/2016/09/BIRD-EYE-VIEW_Neptune-Swarjya.jpg" alt=""
+                                        title="BIRD EYE VIEW_Neptune Swarjya" width="1000" height="563"
+                                        data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                                        class="rev-slidebg" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 4 -->
+                                    <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-15-layer-3"
+                                        data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
+                                        data-y="['top','top','top','top']" data-voffset="['0','0','0','0']"
+                                        data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
+                                        data-basealign="slide" data-responsive_offset="on"
+                                        data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                        data-textAlign="['inherit','inherit','inherit','inherit']"
+                                        data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                        data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 5;background-color:rgba(10,10,10,0.8);"> </div>
+                                    <!-- LAYER NR. 5 -->
+                                    <div class="tp-caption   tp-resizeme" id="slide-15-layer-1"
+                                        data-x="['right','right','right','right']" data-hoffset="['25','-18','0','0']"
+                                        data-y="['middle','middle','middle','middle']"
+                                        data-voffset="['-70','-25','-35','-35']" data-fontsize="['50','45','35','35']"
+                                        data-lineheight="['80','75','65','65']" data-width="['1000','700','450','450']"
+                                        data-height="none" data-whitespace="normal" data-type="text"
+                                        data-responsive_offset="on"
+                                        data-frames='[{"delay":500,"split":"chars","splitdelay":0.05,"speed":2010,"split_direction":"forward","frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];","mask":"x:inherit;y:inherit;s:inherit;e:inherit;","ease":"Power2.easeInOut"}]'
+                                        data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                        data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 6; min-width: 1000px; max-width: 1000px; white-space: normal; font-size: 50px; line-height: 80px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: px;font-family:Oswald, sans-serif;text-transform:uppercase;letter-spacing:16px;text-align:right;">
+                                        ONE OF THE LEADING VISUALIZATION COMPANY IN ASIA </div>
+                                </li>
+                                <!-- SLIDE  -->
+                                <li data-index="rs-11" data-transition="slotzoom-horizontal" data-slotamount="1"
+                                    data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
+                                    data-easeout="default" data-masterspeed="1000" data-delay="3000" data-rotate="0"
+                                    data-saveperformance="off" data-title="Slide" data-param1="" data-param2=""
+                                    data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                                    data-param8="" data-param9="" data-param10="" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="wp-content/uploads/2016/09/bird-eye-view-night-_02.jpg" alt=""
+                                        title="bird eye view night _02" width="5000" height="2813"
+                                        data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat"
+                                        class="rev-slidebg" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 6 -->
+                                    <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-11-layer-3"
+                                        data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
+                                        data-y="['top','top','top','top']" data-voffset="['0','0','0','0']"
+                                        data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
+                                        data-basealign="slide" data-responsive_offset="on"
+                                        data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                        data-textAlign="['inherit','inherit','inherit','inherit']"
+                                        data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                        data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 5;background-color:rgba(0,0,0,0.8);"> </div>
+                                    <!-- LAYER NR. 7 -->
+                                    <div class="tp-caption   tp-resizeme" id="slide-11-layer-1"
+                                        data-x="['right','right','right','right']" data-hoffset="['27','-18','0','0']"
+                                        data-y="['middle','middle','middle','middle']"
+                                        data-voffset="['-37','-55','-55','-35']" data-fontsize="['50','45','35','35']"
+                                        data-lineheight="['80','75','65','65']" data-width="['1100','700','500','500']"
+                                        data-height="none" data-whitespace="normal" data-type="text"
+                                        data-responsive_offset="on"
+                                        data-frames='[{"delay":500,"split":"chars","splitdelay":0.05,"speed":2000,"split_direction":"forward","frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];opacity:0;","ease":"Power2.easeInOut"}]'
+                                        data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                        data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 6; min-width: 1100px; max-width: 1100px; white-space: normal; font-size: 50px; line-height: 80px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: px;font-family:Oswald, sans-serif;text-transform:uppercase;text-align:right;letter-spacing:16px;">
+                                        we visualize the<br>
+                                        unbuilt architecture
+                                    </div>
+                                </li>
+                                <!-- SLIDE  -->
+                                <li data-index="rs-19" data-transition="slotzoom-horizontal" data-slotamount="1"
+                                    data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
+                                    data-easeout="default" data-masterspeed="1000" data-delay="3000" data-rotate="0"
+                                    data-saveperformance="off" data-title="Slide" data-param1="" data-param2=""
+                                    data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                                    data-param8="" data-param9="" data-param10="" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="wp-content/uploads/2019/07/int6.jpg" alt="" title="int6" width="800"
+                                        height="533" data-bgposition="center center" data-bgfit="cover"
+                                        data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 8 -->
+                                    <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-19-layer-3"
+                                        data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
+                                        data-y="['top','top','top','top']" data-voffset="['0','0','0','0']"
+                                        data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
+                                        data-basealign="slide" data-responsive_offset="on"
+                                        data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                        data-textAlign="['inherit','inherit','inherit','inherit']"
+                                        data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                        data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 5;background-color:rgba(0,0,0,0.8);"> </div>
+                                    <!-- LAYER NR. 9 -->
+                                    <div class="tp-caption   tp-resizeme" id="slide-19-layer-1"
+                                        data-x="['right','right','right','right']" data-hoffset="['19','-18','0','0']"
+                                        data-y="['middle','middle','middle','middle']"
+                                        data-voffset="['38','-55','-55','-35']" data-fontsize="['50','45','35','35']"
+                                        data-lineheight="['80','75','65','65']" data-width="['1100','700','500','500']"
+                                        data-height="none" data-whitespace="normal" data-type="text"
+                                        data-responsive_offset="on"
+                                        data-frames='[{"delay":500,"split":"chars","splitdelay":0.05,"speed":2000,"split_direction":"forward","frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];opacity:0;","ease":"Power2.easeInOut"}]'
+                                        data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                        data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 6; min-width: 1100px; max-width: 1100px; white-space: normal; font-size: 50px; line-height: 80px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: px;font-family:Oswald, sans-serif;text-transform:uppercase;text-align:right;letter-spacing:16px;">
+                                        we believe that<br>
+                                        god is in detail </div>
+                                </li>
+                                <!-- SLIDE  -->
+                                <li data-index="rs-20" data-transition="slotzoom-horizontal" data-slotamount="1"
+                                    data-hideafterloop="0" data-hideslideonmobile="off" data-easein="default"
+                                    data-easeout="default" data-masterspeed="1000" data-delay="3000" data-rotate="0"
+                                    data-saveperformance="off" data-title="Slide" data-param1="" data-param2=""
+                                    data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                                    data-param8="" data-param9="" data-param10="" data-description="">
+                                    <!-- MAIN IMAGE -->
+                                    <img src="wp-content/uploads/2019/07/ext14.jpg" alt="" title="ext14" width="800"
+                                        height="450" data-bgposition="center center" data-bgfit="cover"
+                                        data-bgrepeat="no-repeat" class="rev-slidebg" data-no-retina>
+                                    <!-- LAYERS -->
+                                    <!-- LAYER NR. 10 -->
+                                    <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" id="slide-20-layer-3"
+                                        data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']"
+                                        data-y="['top','top','top','top']" data-voffset="['0','0','0','0']"
+                                        data-width="full" data-height="full" data-whitespace="nowrap" data-type="shape"
+                                        data-basealign="slide" data-responsive_offset="on"
+                                        data-frames='[{"delay":10,"speed":300,"frame":"0","from":"opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
+                                        data-textAlign="['inherit','inherit','inherit','inherit']"
+                                        data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]"
+                                        data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 5;background-color:rgba(0,0,0,0.8);"> </div>
+                                    <!-- LAYER NR. 11 -->
+                                    <div class="tp-caption   tp-resizeme" id="slide-20-layer-1"
+                                        data-x="['right','right','right','right']" data-hoffset="['19','-18','0','0']"
+                                        data-y="['middle','middle','middle','middle']"
+                                        data-voffset="['38','-55','-55','-35']" data-fontsize="['50','45','35','35']"
+                                        data-lineheight="['80','75','65','65']" data-width="['1100','700','500','500']"
+                                        data-height="none" data-whitespace="normal" data-type="text"
+                                        data-responsive_offset="on"
+                                        data-frames='[{"delay":500,"split":"chars","splitdelay":0.05,"speed":2000,"split_direction":"forward","frame":"0","from":"x:[105%];z:0;rX:45deg;rY:0deg;rZ:90deg;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":1000,"frame":"999","to":"y:[100%];opacity:0;","ease":"Power2.easeInOut"}]'
+                                        data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                                        data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                        data-paddingleft="[0,0,0,0]"
+                                        style="z-index: 6; min-width: 1100px; max-width: 1100px; white-space: normal; font-size: 50px; line-height: 80px; font-weight: 400; color: rgba(255,255,255,1); letter-spacing: px;font-family:Oswald, sans-serif;text-transform:uppercase;text-align:right;letter-spacing:16px;">
+                                        we have never<br>
+                                        missed a deadline<br>
+                                        till now </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <script type="text/javascript">
+                            if (setREVStartSize !== undefined) setREVStartSize(
+                                { c: '#rev_slider_1_1', responsiveLevels: [2048, 1750, 1192,], gridwidth: [1140, 1140, 940, 940], gridheight: [550, 550, 550, 550], sliderLayout: 'fullscreen', fullScreenAutoWidth: 'off', fullScreenAlignForce: 'off', fullScreenOffsetContainer: '', fullScreenOffset: '' });
+                            var revapi1,
+                                tpj;
+                            (function () {
+                                if (!/loaded|interactive|complete/.test(document.readyState)) document.addEventListener("DOMContentLoaded", onLoad); else onLoad();
+                                function onLoad() {
+                                    if (tpj === undefined) { tpj = jQuery; if ("off" == "on") tpj.noConflict(); }
+                                    if (tpj("#rev_slider_1_1").revolution == undefined) {
+                                        revslider_showDoubleJqueryError("#rev_slider_1_1");
+                                    } else {
+                                        revapi1 = tpj("#rev_slider_1_1").show().revolution({
+                                            sliderType: "standard",
+                                            jsFileLocation: "wp-content/plugins/revslider/public/assets/js/",
+                                            sliderLayout: "fullscreen",
+                                            dottedOverlay: "none",
+                                            delay: 3000,
+                                            navigation: {
+                                                onHoverStop: "off",
+                                            },
+                                            responsiveLevels: [2048, 1750, 1192,],
+                                            visibilityLevels: [2048, 1750, 1192,],
+                                            gridwidth: [1140, 1140, 940, 940],
+                                            gridheight: [550, 550, 550, 550],
+                                            lazyType: "none",
+                                            shadow: 0,
+                                            spinner: "spinner0",
+                                            stopLoop: "off",
+                                            stopAfterLoops: -1,
+                                            stopAtSlide: -1,
+                                            shuffle: "off",
+                                            autoHeight: "on",
+                                            fullScreenAutoWidth: "off",
+                                            fullScreenAlignForce: "off",
+                                            fullScreenOffsetContainer: "",
+                                            fullScreenOffset: "",
+                                            disableProgressBar: "on",
+                                            hideThumbsOnMobile: "off",
+                                            hideSliderAtLimit: 0,
+                                            hideCaptionAtLimit: 0,
+                                            hideAllCaptionAtLilmit: 0,
+                                            debugMode: false,
+                                            fallbacks: {
+                                                simplifyAll: "off",
+                                                nextSlideOnWindowFocus: "off",
+                                                disableFocusListener: false,
+                                            }
+                                        });
+                                        function addZero(source) {
+                                            if (source < 10) {
+                                                return '0' + source;
+                                            }
+                                            return source;
+                                        }
+                                        var slider = revapi1;
+                                        jQuery('.arrow-left').on('click', function () {
+                                            slider.revprev();
+                                        });
+                                        jQuery('.arrow-right').on('click', function () {
+                                            slider.revnext();
+                                        });
+                                        var api = slider;
+                                        var divider = ' / ',
+                                            totalSlides,
+                                            numberText;
+                                        api.one('revolution.slide.onloaded', function () {
+                                            jQuery('.slide-number').show();
+                                            totalSlides = api.revmaxslide();
+                                            ;
+                                            numberText = jQuery('.slide-number .total-count').text(addZero(totalSlides));
+                                            api.on('revolution.slide.onchange', function (e, data) {
+                                                jQuery('.slide-number .count').text(addZero(data.slideIndex));
+                                            });
+                                        });
+                                    }; /* END OF revapi call */
+                                }; /* END OF ON LOAD FUNCTION */
+                            }()); /* END OF WRAPPING FUNCTION */
+                        </script>
+                        <script>
+                            var htmlDivCss = unescape(".rev_slider%20.tp-caption.tp-resizeme%20%7B%0A%20%20%20%20%20text-align%3A%20right%20%21important%3B%0A%7D");
+                            var htmlDiv = document.getElementById('rs-plugin-settings-inline-css');
+                            if (htmlDiv) {
+                                htmlDiv.innerHTML = htmlDiv.innerHTML + htmlDivCss;
+                            }
+                            else {
+                                var htmlDiv = document.createElement('div');
+                                htmlDiv.innerHTML = '<style>' + htmlDivCss + '</style>';
+                                document.getElementsByTagName('head')[0].appendChild(htmlDiv.childNodes[0]);
+                            }
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script type="text/javascript">
+        function revslider_showDoubleJqueryError(sliderID) {
+            var errorMessage = "Revolution Slider Error: You have some jquery.js library include that comes after the revolution files js include.";
+            errorMessage += "<br> This includes make eliminates the revolution slider libraries, and make it not work.";
+            errorMessage += "<br><br> To fix it you can:<br>&nbsp;&nbsp;&nbsp; 1. In the Slider Settings -> Troubleshooting set option:  <strong><b>Put JS Includes To Body</b></strong> option to true.";
+            errorMessage += "<br>&nbsp;&nbsp;&nbsp; 2. Find the double jquery.js include and remove it.";
+            errorMessage = "<span style='font-size:16px;color:#BC0C06;'>" + errorMessage + "</span>";
+            jQuery(sliderID).show().html(errorMessage);
+        }
+    </script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var ht_ccw_var = { "page_title": "Homepage", "google_analytics": "", "ga_category": "", "ga_action": "", "ga_label": "", "fb_analytics": "", "fb_event_name": "", "p1_value": "", "p2_value": "", "p3_value": "", "p1_name": "", "p2_name": "", "p3_name": "" };
+    /* ]]> */
+    </script>
+    <script type='text/javascript' src='wp-content/plugins/click-to-chat-for-whatsapp/assets/js/app.js'></script>
+    <script type='text/javascript' src='wp-content/themes/goarch/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='wp-content/themes/goarch/js/jquery.validate.min.js'></script>
+    <script type='text/javascript' src='wp-content/themes/goarch/js/wow.min.js'></script>
+    <script type='text/javascript' src='wp-content/themes/goarch/js/jquery.stellar.min.js'></script>
+    <script type='text/javascript' src='wp-content/themes/goarch/js/jquery.magnific-popup.js'></script>
+    <script type='text/javascript' src='wp-content/themes/goarch/js/owl.carousel.min.js'></script>
+    <script type='text/javascript'>
+        /* <![CDATA[ */
+        var goarch_obj = { "ajaxurl": "index.html", "theme_url": "http:\/\/www.raydimension.com\/wp-content\/themes\/goarch" };
+    /* ]]> */
+    </script>
+    <script type='text/javascript' src='wp-content/themes/goarch/js/interface.js'></script>
+    <script type='text/javascript'
+        src='https://maps.google.com/maps/api/js?key=AIzaSyAQ0FBrS86laigd1gOb6NniK5MkwRZAZ5k&#038;ver=1'></script>
+    <script type='text/javascript' src='wp-content/themes/goarch/js/gmap.js'></script>
+    <script type='text/javascript' src='wp-includes/js/comment-reply.min.js'></script>
+    <script type='text/javascript' src='wp-includes/js/wp-embed.min.js'></script>
+    <script type='text/javascript'
+        src='wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js'></script>
 </body>
+
 </html>
