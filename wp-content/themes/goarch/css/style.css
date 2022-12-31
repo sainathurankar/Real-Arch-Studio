@@ -1032,7 +1032,8 @@ label.error {
 
 .navbar-collapse {
   border: 0;
-  background-color: rgba(50, 50, 50, 0.95);
+  /* -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px); */
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -1108,8 +1109,7 @@ label.error {
 
 .navbar-nav-mobile > .active > a,
 .navbar-nav-mobile > .active > a:hover {
-  background-color: #c5a47e;
-  color: #fff;
+  /* background-color: #c5a47e; */
   -webkit-transition: none;
   -o-transition: none;
   transition: none;
@@ -1128,10 +1128,11 @@ label.error {
 
 .navbar-mobile.affix {
   position: fixed;
+  height: 100%;
   z-index: 5;
-  background-color: rgba(50, 50, 50, 0.95);
-  box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
-  padding: 1.2em 0;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  padding: 1.8em 0;
+  backdrop-filter: blur(8px);
 }
 
 .navbar-mobile.affix .brand {

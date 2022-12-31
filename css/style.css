@@ -1018,12 +1018,16 @@ label.error {
 /* 2.5 Navbar Mobile */
 
 .navbar-mobile {
-  position: absolute;
-  z-index: 2;
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
   left: 0;
-  top: 0;
-  width: 100%;
-  padding: 6vmin 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s;
 }
 
 .navbar-mobile .brand {
@@ -1080,10 +1084,12 @@ label.error {
 .navbar-nav-mobile li {
   position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  /* transition: opacity .2s ease, transform .3s; */
+  /* transition-delay: 2s; */
 }
 
 .navbar-nav-mobile li a {
-  display: block;
+  display: inline-block;
   padding: 1em 1em;
   color: #fff;
   text-decoration: none;
@@ -3000,11 +3006,11 @@ img.mfp-img {
 
   /* Navbar Mobile */
 
-  .navbar-mobile {
+  /* .navbar-mobile {
     position: absolute;
     left: -50000px;
     top: -50000px;
-  }
+  } */
 
   /* About */
 
